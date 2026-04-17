@@ -10,6 +10,10 @@ I'm an electrical engineer turned computational scientist, currently pursuing a 
 
 ⚙️ **Industry** - Leading data operations at scale (400-500 insurance certificates/week, zero-error SLA), building Python & Apps Script automation pipelines that eliminated hours of manual work, and developing demand forecasting models used for capacity planning.
 
+### 🔬 Current Project
+
+**[NeuTherm-PINN](https://github.com/carcaraa/neutherm-pinn)** — Physics-Informed Neural Networks for coupled neutronics–thermal hydraulics in nuclear fuel elements. Solving the 2-group neutron diffusion equation coupled with heat conduction using PyTorch, comparing data-driven surrogates vs PINNs. *Work in progress.*
+
 ## Featured projects
 
 | Project | What it does | Stack |
