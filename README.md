@@ -10,14 +10,25 @@ I'm an electrical engineer turned computational scientist, currently pursuing a 
 
 ⚙️ **Industry** - Leading data operations at scale (400-500 insurance certificates/week, zero-error SLA), building Python & Apps Script automation pipelines that eliminated hours of manual work, and developing demand forecasting models used for capacity planning.
 
-### 🔬 Current Project
+## Highlight: NeuTherm-PINN
 
-**[NeuTherm-PINN](https://github.com/carcaraa/neutherm-pinn)** — Physics-Informed Neural Networks for coupled neutronics–thermal hydraulics in nuclear fuel elements. Solving the 2-group neutron diffusion equation coupled with heat conduction using PyTorch, comparing data-driven surrogates vs PINNs. *Work in progress.*
+[![NeuTherm-PINN](https://img.shields.io/badge/NeuTherm--PINN-Physics--Informed%20ML%20for%20Nuclear%20Reactors-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://github.com/carcaraa/neutherm-pinn)
+
+End-to-end ML project solving the **coupled neutron diffusion + heat conduction** problem in a PWR fuel pin using PyTorch. Compares a data-driven surrogate (FNN) against a physics-informed neural network (PINN) that learns directly from the governing PDEs via automatic differentiation.
+
+| Component | Description |
+|-----------|-------------|
+| **Solver** | 2-group finite-difference diffusion + Picard-coupled heat conduction ($k_{\text{eff}}$ = 1.30, converges in 6 iterations) |
+| **Surrogate** | FNN with residual blocks trained on 5000 LHS samples — **< 0.003% error** on all fields |
+| **PINN** | Learns $\phi_1(r), \phi_2(r), T(r)$ and $k_{\text{eff}}$ from PDEs alone, no labeled data needed |
+
+Built from scratch: numerical solvers, cross-section models (Doppler feedback), dataset generation (Latin Hypercube), training pipelines, and comparison benchmarks. **[See the repo →](https://github.com/carcaraa/neutherm-pinn)**
 
 ## Featured projects
 
 | Project | What it does | Stack |
 |---------|-------------|-------|
+| [**neutherm-pinn**](https://github.com/carcaraa/neutherm-pinn) | PINNs for coupled neutronics–thermal hydraulics in nuclear fuel elements | PyTorch · NumPy · SciPy |
 | [**redes-neurais**](https://github.com/carcaraa/redes-neurais) | PINNs for solving ODEs/PDEs — full ML pipeline from linear regression to deep learning | PyTorch · NumPy · Matplotlib |
 | [**article-multi-small-candu-th**](https://github.com/carcaraa/article-multi-small-candu-th) | Multiphysics simulation of a small supercritical CANDU reactor with thorium fuel | Serpent · ANSYS Fluent · Python |
 | [**alocacao-dlccs**](https://github.com/carcaraa/alocacao-dlccs) | Multi-objective genetic algorithm (NSGA-II) for optimal placement of fault current limiters in power systems | Python · Optimization |
